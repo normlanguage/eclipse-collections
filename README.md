@@ -1,5 +1,7 @@
 # Eclipse Collections
 
-适配声明与可运行示例位于 `eclipse/collections`，固定 Eclipse Collections 13.0.0 与对应 API artifact，发布坐标为 `eclipse:collections:1`。公开面覆盖 `FastList`、`UnifiedSet`、`UnifiedMap`、`FastListMultimap`、`IntArrayList` 及常用筛选、变换、分组和原生整数集合操作。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-独立 NAR 消费、传递 API 依赖、继承公开方法、对象与原生类型回调由 `EclipseCollectionsBindingIntegrationTest` 验收。完整 census 与未支持原因位于 NAR 的 `binding/java-api.json`。
+The adapter declaration and runnable example are in `eclipse/collections`. It pins Eclipse Collections 13.0.0 and the matching API artifact, and publishes as `eclipse:collections:1`. The public API covers `FastList`, `UnifiedSet`, `UnifiedMap`, `FastListMultimap`, `IntArrayList`, and common filtering, transformation, grouping, and primitive integer collection operations.
+
+`EclipseCollectionsBindingIntegrationTest` covers standalone NAR consumption, the transitive API dependency, inherited public methods, and object and primitive callbacks. The complete API census and reasons for unsupported APIs are in the NAR's `binding/java-api.json`.
