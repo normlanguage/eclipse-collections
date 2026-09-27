@@ -1,0 +1,25 @@
+import eclipse.collections.FastList
+import eclipse.collections.fastListNew
+import eclipse.collections.IntArrayList
+import eclipse.collections.intArrayListNew
+
+main() {
+  FastList<String?> labels = fastListNew<String>()
+  labels.add("Norm")
+  labels.add("Java")
+  labels.add("NAR")
+
+  FastList<String?> selected = labels.select((value) { value != "Java" })!!
+  printLine(selected.size())
+
+  IntArrayList numbers = intArrayListNew()
+  numbers.add(2)
+  numbers.add(3)
+  numbers.add(5)
+  IntArrayList odd = numbers.select((value) { value % 2 == 1 })!!
+  printLine(odd.sum())
+}
+
+Module module() {
+  module(dependencies: [dependency(repository: "github", name: "eclipse.collections", version: 2)])
+}
