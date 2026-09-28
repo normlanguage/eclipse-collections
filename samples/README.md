@@ -11,3 +11,5 @@ norm run samples/hello.norm
 ```
 
 Expected output: `2` selected labels, then an odd-number sum of `8`. The package is built from [module.norm](../eclipse/collections/module.norm), which pins Eclipse Collections 13.0.0 and defines the exposed API.
+
+The [acceptance example](../examples/sample/eclipse/collections/Main.norm) exercises collections and maps beyond this introduction.

@@ -11,3 +11,5 @@ norm run samples/hello.norm
 ```
 
 预期输出：筛选后的标签数量 `2`，接着是奇数之和 `8`。[module.norm](../eclipse/collections/module.norm) 是软件包的构建来源，指定 Eclipse Collections 13.0.0 并定义公开 API。
+
+[验收示例](../examples/sample/eclipse/collections/Main.norm)覆盖本入门示例之外的集合与映射行为。

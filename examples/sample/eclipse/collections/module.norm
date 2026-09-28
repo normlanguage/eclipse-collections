@@ -1,0 +1,7 @@
+Module module() {
+  return module(
+    name: "sample.eclipse.collections",
+    version: 1,
+    dependencies: [dependency(repository: "github", name: "eclipse.collections", version: 3)]
+  )
+}

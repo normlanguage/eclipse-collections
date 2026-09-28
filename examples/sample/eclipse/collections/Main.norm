@@ -1,4 +1,14 @@
-package eclipse.collections
+package sample.eclipse.collections
+
+import eclipse.collections.FastList
+import eclipse.collections.fastListNew
+import eclipse.collections.FastListMultimap
+import eclipse.collections.UnifiedSet
+import eclipse.collections.unifiedSetNew
+import eclipse.collections.UnifiedMap
+import eclipse.collections.unifiedMapNew
+import eclipse.collections.IntArrayList
+import eclipse.collections.intArrayListNew
 
 Void main() {
   FastList<String?> names = fastListNew<String>()
