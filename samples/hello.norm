@@ -4,12 +4,12 @@ import eclipse.collections.IntArrayList
 import eclipse.collections.intArrayListNew
 
 main() {
-  FastList<String?> labels = fastListNew<String>()
+  FastList<String> labels = fastListNew<String>()
   labels.add("Norm")
   labels.add("Java")
   labels.add("NAR")
 
-  FastList<String?> selected = labels.select((value) { value != "Java" })!!
+  FastList<String> selected = labels.select((value) { value != "Java" })!!
   printLine(selected.size())
 
   IntArrayList numbers = intArrayListNew()
@@ -21,5 +21,5 @@ main() {
 }
 
 Module module() {
-  module(dependencies: [dependency(repository: "github", name: "eclipse.collections", version: 3)])
+  module(dependencies: [dependency(repository: "github", name: "eclipse.collections", version: 4)])
 }
