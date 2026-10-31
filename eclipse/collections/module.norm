@@ -1,7 +1,8 @@
 Module module() {
   return module(
     name: "eclipse.collections",
-    version: 3,
+    version: 4,
+    exports: ["FastList", "UnifiedSet", "UnifiedMap", "FastListMultimap", "IntArrayList"],
     binding: jarBinding(
       target: mavenJar(
         group: "org.eclipse.collections",

@@ -1,14 +1,20 @@
 # eclipse.collections Skill
 
-Use this skill to work with Norm module `eclipse.collections` version 3. Use only declarations listed below.
+Use this skill to work with Norm module `eclipse.collections` version 4. Use only declarations listed below.
 
 ## `eclipse.collections`
+
+Source: `AbstractRichIterable.norm`
 
 ### `AbstractRichIterable`
 
 ```norm
-class AbstractRichIterable<T> implements RichIterable<T>, Iterable<T?>
+class AbstractRichIterable<T> implements RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `AbstractRichIterable`
 
@@ -16,19 +22,23 @@ class AbstractRichIterable<T> implements RichIterable<T>, Iterable<T?>
 AbstractRichIterable(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections`
+
+Source: `FastList.norm`
 
 ### `FastList`
 
 ```norm
-class FastList<T> extends AbstractMutableList<T> implements BatchIterable<T>, JavaMutableList<T>, JavaMutableCollection<T>, RichIterable<T>, Iterable<T?>
+class FastList<T> extends AbstractMutableList<T> implements Externalizable, RandomAccess, BatchIterable<T>, MutableList<T>, MutableCollection<T>, RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `FastList`
 
@@ -36,11 +46,22 @@ class FastList<T> extends AbstractMutableList<T> implements BatchIterable<T>, Ja
 FastList(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 #### `add`
 
 ```norm
 Void add(Integer arg0, T? arg1)
 ```
+
+Parameters:
+
+- `arg0`: `Integer`
+- `arg1`: `T?`
+
+Returns: `Void`
 
 #### `add`
 
@@ -48,11 +69,23 @@ Void add(Integer arg0, T? arg1)
 Boolean add(T? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `T?`
+
+Returns: `Boolean`
+
 #### `allSatisfy`
 
 ```norm
 Boolean allSatisfy(Function<Boolean(T?)>? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `Boolean`
 
 #### `anySatisfy`
 
@@ -60,17 +93,35 @@ Boolean allSatisfy(Function<Boolean(T?)>? arg0)
 Boolean anySatisfy(Function<Boolean(T?)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `Boolean`
+
 #### `clear`
 
 ```norm
 Void clear()
 ```
 
+Returns: `Void`
+
 #### `collect`
 
 ```norm
-FastList<V?>? collect<V>(Function<V?(T?)>? arg0)
+FastList<V>? collect<V>(Function<V?(T?)>? arg0)
 ```
+
+Type parameters:
+
+- `V`
+
+Parameters:
+
+- `arg0`: `Function<V?(T?)>?`
+
+Returns: `FastList<V>?`
 
 #### `contains`
 
@@ -78,11 +129,23 @@ FastList<V?>? collect<V>(Function<V?(T?)>? arg0)
 Boolean contains(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
+
 #### `count`
 
 ```norm
 Integer count(Function<Boolean(T?)>? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `Integer`
 
 #### `get`
 
@@ -90,11 +153,19 @@ Integer count(Function<Boolean(T?)>? arg0)
 T? get(Integer arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `T?`
+
 #### `getFirst`
 
 ```norm
 T? getFirst()
 ```
+
+Returns: `T?`
 
 #### `getLast`
 
@@ -102,17 +173,31 @@ T? getFirst()
 T? getLast()
 ```
 
+Returns: `T?`
+
 #### `groupBy`
 
 ```norm
-FastListMultimap<V?, T?>? groupBy<V>(Function<V?(T?)>? arg0)
+FastListMultimap<V, T>? groupBy<V>(Function<V?(T?)>? arg0)
 ```
+
+Type parameters:
+
+- `V`
+
+Parameters:
+
+- `arg0`: `Function<V?(T?)>?`
+
+Returns: `FastListMultimap<V, T>?`
 
 #### `isEmpty`
 
 ```norm
 Boolean isEmpty()
 ```
+
+Returns: `Boolean`
 
 #### `noneSatisfy`
 
@@ -120,11 +205,23 @@ Boolean isEmpty()
 Boolean noneSatisfy(Function<Boolean(T?)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `Boolean`
+
 #### `reject`
 
 ```norm
-FastList<T?>? reject(Function<Boolean(T?)>? arg0)
+FastList<T>? reject(Function<Boolean(T?)>? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `FastList<T>?`
 
 #### `remove`
 
@@ -132,23 +229,43 @@ FastList<T?>? reject(Function<Boolean(T?)>? arg0)
 T? remove(Integer arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `T?`
+
 #### `remove`
 
 ```norm
 Boolean remove(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
+
 #### `reverseThis`
 
 ```norm
-FastList<T?>? reverseThis()
+FastList<T>? reverseThis()
 ```
+
+Returns: `FastList<T>?`
 
 #### `select`
 
 ```norm
-FastList<T?>? select(Function<Boolean(T?)>? arg0)
+FastList<T>? select(Function<Boolean(T?)>? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Function<Boolean(T?)>?`
+
+Returns: `FastList<T>?`
 
 #### `size`
 
@@ -156,31 +273,42 @@ FastList<T?>? select(Function<Boolean(T?)>? arg0)
 Integer size()
 ```
 
+Returns: `Integer`
+
 #### `sortThis`
 
 ```norm
-FastList<T?>? sortThis()
+FastList<T>? sortThis()
 ```
 
-#### `iterator`
-
-```norm
-Iterator<T?> iterator()
-```
+Returns: `FastList<T>?`
 
 ### `fastListNew`
 
 ```norm
-FastList<T?> fastListNew<T>()
+FastList<T> fastListNew<T>()
 ```
 
+Type parameters:
+
+- `T`
+
+Returns: `FastList<T>`
+
 ## `eclipse.collections`
+
+Source: `FastListMultimap.norm`
 
 ### `FastListMultimap`
 
 ```norm
-class FastListMultimap<K, V> extends AbstractMutableListMultimap<K, V> implements MutableListMultimap<K, V>, MutableMultimap<K, V>, Multimap<K, V>
+class FastListMultimap<K, V> extends AbstractMutableListMultimap<K, V> implements Externalizable, MutableListMultimap<K, V>, MutableMultimap<K, V>, Multimap<K, V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `FastListMultimap`
 
@@ -188,11 +316,17 @@ class FastListMultimap<K, V> extends AbstractMutableListMultimap<K, V> implement
 FastListMultimap(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 #### `clear`
 
 ```norm
 Void clear()
 ```
+
+Returns: `Void`
 
 #### `containsKey`
 
@@ -200,11 +334,24 @@ Void clear()
 Boolean containsKey(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
+
 #### `containsKeyAndValue`
 
 ```norm
 Boolean containsKeyAndValue(Any? arg0, Any? arg1)
 ```
+
+Parameters:
+
+- `arg0`: `Any?`
+- `arg1`: `Any?`
+
+Returns: `Boolean`
 
 #### `containsValue`
 
@@ -212,11 +359,19 @@ Boolean containsKeyAndValue(Any? arg0, Any? arg1)
 Boolean containsValue(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
+
 #### `isEmpty`
 
 ```norm
 Boolean isEmpty()
 ```
+
+Returns: `Boolean`
 
 #### `notEmpty`
 
@@ -224,11 +379,20 @@ Boolean isEmpty()
 Boolean notEmpty()
 ```
 
+Returns: `Boolean`
+
 #### `put`
 
 ```norm
 Boolean put(K? arg0, V? arg1)
 ```
+
+Parameters:
+
+- `arg0`: `K?`
+- `arg1`: `V?`
+
+Returns: `Boolean`
 
 #### `remove`
 
@@ -236,11 +400,20 @@ Boolean put(K? arg0, V? arg1)
 Boolean remove(Any? arg0, Any? arg1)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+- `arg1`: `Any?`
+
+Returns: `Boolean`
+
 #### `size`
 
 ```norm
 Integer size()
 ```
+
+Returns: `Integer`
 
 #### `sizeDistinct`
 
@@ -248,18 +421,29 @@ Integer size()
 Integer sizeDistinct()
 ```
 
+Returns: `Integer`
+
 ### `fastListMultimapNew`
 
 ```norm
-FastListMultimap<K?, V?> fastListMultimapNew<K, V>()
+FastListMultimap<K, V> fastListMultimapNew<K, V>()
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
+Returns: `FastListMultimap<K, V>`
+
 ## `eclipse.collections`
+
+Source: `IntArrayList.norm`
 
 ### `IntArrayList`
 
 ```norm
-class IntArrayList extends AbstractIntIterable implements MutableIntList, IntIterable
+class IntArrayList extends AbstractIntIterable implements MutableIntList, Externalizable, IntIterable
 ```
 
 #### `IntArrayList`
@@ -268,11 +452,21 @@ class IntArrayList extends AbstractIntIterable implements MutableIntList, IntIte
 IntArrayList(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 #### `add`
 
 ```norm
 Boolean add(Integer arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `Boolean`
 
 #### `allSatisfy`
 
@@ -280,11 +474,23 @@ Boolean add(Integer arg0)
 Boolean allSatisfy(Function<Boolean(Integer)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(Integer)>?`
+
+Returns: `Boolean`
+
 #### `anySatisfy`
 
 ```norm
 Boolean anySatisfy(Function<Boolean(Integer)>? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Function<Boolean(Integer)>?`
+
+Returns: `Boolean`
 
 #### `binarySearch`
 
@@ -292,11 +498,23 @@ Boolean anySatisfy(Function<Boolean(Integer)>? arg0)
 Integer binarySearch(Integer arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `Integer`
+
 #### `contains`
 
 ```norm
 Boolean contains(Integer arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `Boolean`
 
 #### `count`
 
@@ -304,11 +522,23 @@ Boolean contains(Integer arg0)
 Integer count(Function<Boolean(Integer)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(Integer)>?`
+
+Returns: `Integer`
+
 #### `get`
 
 ```norm
 Integer get(Integer arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Integer`
+
+Returns: `Integer`
 
 #### `getFirst`
 
@@ -316,11 +546,15 @@ Integer get(Integer arg0)
 Integer getFirst()
 ```
 
+Returns: `Integer`
+
 #### `getLast`
 
 ```norm
 Integer getLast()
 ```
+
+Returns: `Integer`
 
 #### `max`
 
@@ -328,11 +562,15 @@ Integer getLast()
 Integer max()
 ```
 
+Returns: `Integer`
+
 #### `min`
 
 ```norm
 Integer min()
 ```
+
+Returns: `Integer`
 
 #### `reject`
 
@@ -340,11 +578,19 @@ Integer min()
 IntArrayList? reject(Function<Boolean(Integer)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(Integer)>?`
+
+Returns: `IntArrayList?`
+
 #### `reverseThis`
 
 ```norm
 IntArrayList? reverseThis()
 ```
+
+Returns: `IntArrayList?`
 
 #### `select`
 
@@ -352,11 +598,19 @@ IntArrayList? reverseThis()
 IntArrayList? select(Function<Boolean(Integer)>? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Function<Boolean(Integer)>?`
+
+Returns: `IntArrayList?`
+
 #### `size`
 
 ```norm
 Integer size()
 ```
+
+Returns: `Integer`
 
 #### `sortThis`
 
@@ -364,11 +618,15 @@ Integer size()
 IntArrayList? sortThis()
 ```
 
+Returns: `IntArrayList?`
+
 #### `sum`
 
 ```norm
 Long sum()
 ```
+
+Returns: `Long`
 
 ### `intArrayListNew`
 
@@ -376,13 +634,22 @@ Long sum()
 IntArrayList intArrayListNew()
 ```
 
+Returns: `IntArrayList`
+
 ## `eclipse.collections`
+
+Source: `UnifiedMap.norm`
 
 ### `UnifiedMap`
 
 ```norm
-class UnifiedMap<K, V> extends AbstractMutableMap<K, V> implements BatchIterable<V>, JavaMutableMap<K, V>, MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>, Iterable<V?>
+class UnifiedMap<K, V> extends AbstractMutableMap<K, V> implements Externalizable, BatchIterable<V>, MutableMap<K, V>, MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `UnifiedMap`
 
@@ -390,11 +657,17 @@ class UnifiedMap<K, V> extends AbstractMutableMap<K, V> implements BatchIterable
 UnifiedMap(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 #### `clear`
 
 ```norm
 Void clear()
 ```
+
+Returns: `Void`
 
 #### `containsKey`
 
@@ -402,11 +675,23 @@ Void clear()
 Boolean containsKey(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
+
 #### `containsValue`
 
 ```norm
 Boolean containsValue(Any? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
 
 #### `get`
 
@@ -414,11 +699,24 @@ Boolean containsValue(Any? arg0)
 V? get(Any? arg0)
 ```
 
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `V?`
+
 #### `getIfAbsentPut`
 
 ```norm
 V? getIfAbsentPut(K? arg0, V? arg1)
 ```
+
+Parameters:
+
+- `arg0`: `K?`
+- `arg1`: `V?`
+
+Returns: `V?`
 
 #### `getIfAbsentPut`
 
@@ -426,17 +724,28 @@ V? getIfAbsentPut(K? arg0, V? arg1)
 V? getIfAbsentPut(K? arg0, Function<V?()>? arg1)
 ```
 
+Parameters:
+
+- `arg0`: `K?`
+- `arg1`: `Function<V?()>?`
+
+Returns: `V?`
+
 #### `isEmpty`
 
 ```norm
 Boolean isEmpty()
 ```
 
+Returns: `Boolean`
+
 #### `keySet`
 
 ```norm
-MutableSet<K?>? keySet()
+JavaSet<K>? keySet()
 ```
+
+Returns: `JavaSet<K>?`
 
 #### `put`
 
@@ -444,11 +753,24 @@ MutableSet<K?>? keySet()
 V? put(K? arg0, V? arg1)
 ```
 
+Parameters:
+
+- `arg0`: `K?`
+- `arg1`: `V?`
+
+Returns: `V?`
+
 #### `removeKey`
 
 ```norm
 V? removeKey(K? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `K?`
+
+Returns: `V?`
 
 #### `size`
 
@@ -456,31 +778,42 @@ V? removeKey(K? arg0)
 Integer size()
 ```
 
+Returns: `Integer`
+
 #### `values`
 
 ```norm
-MutableCollection<V?>? values()
+Collection<V>? values()
 ```
 
-#### `iterator`
-
-```norm
-Iterator<V?> iterator()
-```
+Returns: `Collection<V>?`
 
 ### `unifiedMapNew`
 
 ```norm
-UnifiedMap<K?, V?> unifiedMapNew<K, V>()
+UnifiedMap<K, V> unifiedMapNew<K, V>()
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
+Returns: `UnifiedMap<K, V>`
+
 ## `eclipse.collections`
+
+Source: `UnifiedSet.norm`
 
 ### `UnifiedSet`
 
 ```norm
-class UnifiedSet<T> extends AbstractUnifiedSet<T> implements JavaMutableSet<T>, Pool<T>, BatchIterable<T>, JavaMutableCollection<T>, RichIterable<T>, Iterable<T?>
+class UnifiedSet<T> extends AbstractUnifiedSet<T> implements Externalizable, MutableSet<T>, Pool<T>, BatchIterable<T>, MutableCollection<T>, RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `UnifiedSet`
 
@@ -488,11 +821,21 @@ class UnifiedSet<T> extends AbstractUnifiedSet<T> implements JavaMutableSet<T>, 
 UnifiedSet(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 #### `add`
 
 ```norm
 Boolean add(T? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `T?`
+
+Returns: `Boolean`
 
 #### `clear`
 
@@ -500,11 +843,19 @@ Boolean add(T? arg0)
 Void clear()
 ```
 
+Returns: `Void`
+
 #### `contains`
 
 ```norm
 Boolean contains(Any? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
 
 #### `isEmpty`
 
@@ -512,11 +863,19 @@ Boolean contains(Any? arg0)
 Boolean isEmpty()
 ```
 
+Returns: `Boolean`
+
 #### `remove`
 
 ```norm
 Boolean remove(Any? arg0)
 ```
+
+Parameters:
+
+- `arg0`: `Any?`
+
+Returns: `Boolean`
 
 #### `size`
 
@@ -524,25 +883,33 @@ Boolean remove(Any? arg0)
 Integer size()
 ```
 
-#### `iterator`
-
-```norm
-Iterator<T?> iterator()
-```
+Returns: `Integer`
 
 ### `unifiedSetNew`
 
 ```norm
-UnifiedSet<T?> unifiedSetNew<T>()
+UnifiedSet<T> unifiedSetNew<T>()
 ```
 
+Type parameters:
+
+- `T`
+
+Returns: `UnifiedSet<T>`
+
 ## `eclipse.collections.collection.mutable`
+
+Source: `collection/mutable/AbstractMutableCollection.norm`
 
 ### `AbstractMutableCollection`
 
 ```norm
-class AbstractMutableCollection<T> extends AbstractRichIterable<T> implements JavaMutableCollection<T>, RichIterable<T>, Iterable<T?>
+class AbstractMutableCollection<T> extends AbstractRichIterable<T> implements MutableCollection<T>, RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `AbstractMutableCollection`
 
@@ -550,19 +917,23 @@ class AbstractMutableCollection<T> extends AbstractRichIterable<T> implements Ja
 AbstractMutableCollection(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections.list.mutable`
+
+Source: `list/mutable/AbstractMutableList.norm`
 
 ### `AbstractMutableList`
 
 ```norm
-class AbstractMutableList<T> extends AbstractMutableCollection<T> implements JavaMutableList<T>, JavaMutableCollection<T>, RichIterable<T>, Iterable<T?>
+class AbstractMutableList<T> extends AbstractMutableCollection<T> implements MutableList<T>, MutableCollection<T>, RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `AbstractMutableList`
 
@@ -570,19 +941,24 @@ class AbstractMutableList<T> extends AbstractMutableCollection<T> implements Jav
 AbstractMutableList(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections.map`
+
+Source: `map/AbstractMapIterable.norm`
 
 ### `AbstractMapIterable`
 
 ```norm
-class AbstractMapIterable<K, V> extends AbstractRichIterable<V> implements MapIterable<K, V>, RichIterable<V>, Iterable<V?>
+class AbstractMapIterable<K, V> extends AbstractRichIterable<V> implements MapIterable<K, V>, RichIterable<V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `AbstractMapIterable`
 
@@ -590,19 +966,24 @@ class AbstractMapIterable<K, V> extends AbstractRichIterable<V> implements MapIt
 AbstractMapIterable(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections.map.mutable`
+
+Source: `map/mutable/AbstractMutableMap.norm`
 
 ### `AbstractMutableMap`
 
 ```norm
-class AbstractMutableMap<K, V> extends AbstractMutableMapIterable<K, V> implements JavaMutableMap<K, V>, MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>, Iterable<V?>
+class AbstractMutableMap<K, V> extends AbstractMutableMapIterable<K, V> implements MutableMap<K, V>, MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `AbstractMutableMap`
 
@@ -610,19 +991,24 @@ class AbstractMutableMap<K, V> extends AbstractMutableMapIterable<K, V> implemen
 AbstractMutableMap(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections.map.mutable`
+
+Source: `map/mutable/AbstractMutableMapIterable.norm`
 
 ### `AbstractMutableMapIterable`
 
 ```norm
-class AbstractMutableMapIterable<K, V> extends AbstractMapIterable<K, V> implements MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>, Iterable<V?>
+class AbstractMutableMapIterable<K, V> extends AbstractMapIterable<K, V> implements MutableMapIterable<K, V>, MapIterable<K, V>, RichIterable<V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `AbstractMutableMapIterable`
 
@@ -630,13 +1016,13 @@ class AbstractMutableMapIterable<K, V> extends AbstractMapIterable<K, V> impleme
 AbstractMutableMapIterable(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `token`: `__JarBindingToken`
 
 ## `eclipse.collections.multimap`
+
+Source: `multimap/AbstractMultimap.norm`
 
 ### `AbstractMultimap`
 
@@ -644,19 +1030,37 @@ Iterator<V?> iterator()
 class AbstractMultimap<K, V, C extends RichIterable<V>> implements Multimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+- `C` extends `RichIterable<V>`
+
 #### `AbstractMultimap`
 
 ```norm
 AbstractMultimap(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 ## `eclipse.collections.multimap`
+
+Source: `multimap/AbstractMutableMultimap.norm`
 
 ### `AbstractMutableMultimap`
 
 ```norm
-class AbstractMutableMultimap<K, V, C extends JavaMutableCollection<V>> extends AbstractMultimap<K, V, C> implements MutableMultimap<K, V>, Multimap<K, V>
+class AbstractMutableMultimap<K, V, C extends MutableCollection<V>> extends AbstractMultimap<K, V, C> implements MutableMultimap<K, V>, Multimap<K, V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
+- `C` extends `MutableCollection<V>`
 
 #### `AbstractMutableMultimap`
 
@@ -664,13 +1068,24 @@ class AbstractMutableMultimap<K, V, C extends JavaMutableCollection<V>> extends 
 AbstractMutableMultimap(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 ## `eclipse.collections.multimap.list`
+
+Source: `multimap/list/AbstractMutableListMultimap.norm`
 
 ### `AbstractMutableListMultimap`
 
 ```norm
-class AbstractMutableListMultimap<K, V> extends AbstractMutableMultimap<K, V, JavaMutableList<V>> implements MutableListMultimap<K, V>, MutableMultimap<K, V>, Multimap<K, V>
+class AbstractMutableListMultimap<K, V> extends AbstractMutableMultimap<K, V, MutableList<V>> implements MutableListMultimap<K, V>, MutableMultimap<K, V>, Multimap<K, V>
 ```
+
+Type parameters:
+
+- `K`
+- `V`
 
 #### `AbstractMutableListMultimap`
 
@@ -678,7 +1093,13 @@ class AbstractMutableListMultimap<K, V> extends AbstractMutableMultimap<K, V, Ja
 AbstractMutableListMultimap(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 ## `eclipse.collections.org.eclipse.collections.api`
+
+Source: `org/eclipse/collections/api/IntIterable.norm`
 
 ### `IntIterable`
 
@@ -688,19 +1109,21 @@ interface IntIterable extends PrimitiveIterable
 
 ## `eclipse.collections.org.eclipse.collections.api`
 
+Source: `org/eclipse/collections/api/InternalIterable.norm`
+
 ### `InternalIterable`
 
 ```norm
-interface InternalIterable<T> extends Iterable<T?>
+interface InternalIterable<T> extends Iterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api`
+
+Source: `org/eclipse/collections/api/PrimitiveIterable.norm`
 
 ### `PrimitiveIterable`
 
@@ -710,33 +1133,35 @@ interface PrimitiveIterable
 
 ## `eclipse.collections.org.eclipse.collections.api`
 
+Source: `org/eclipse/collections/api/RichIterable.norm`
+
 ### `RichIterable`
 
 ```norm
-interface RichIterable<T> extends InternalIterable<T>, Iterable<T?>
+interface RichIterable<T> extends InternalIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.collection`
 
-### `JavaMutableCollection`
+Source: `org/eclipse/collections/api/collection/MutableCollection.norm`
+
+### `MutableCollection`
 
 ```norm
-interface JavaMutableCollection<T> extends RichIterable<T>, Iterable<T?>
+interface MutableCollection<T> extends Collection<T>, RichIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.collection.primitive`
+
+Source: `org/eclipse/collections/api/collection/primitive/MutableIntCollection.norm`
 
 ### `MutableIntCollection`
 
@@ -746,33 +1171,35 @@ interface MutableIntCollection extends IntIterable
 
 ## `eclipse.collections.org.eclipse.collections.api.list`
 
-### `JavaMutableList`
-
-```norm
-interface JavaMutableList<T> extends JavaMutableCollection<T>, ListIterable<T>, Iterable<T?>
-```
-
-#### `iterator`
-
-```norm
-Iterator<T?> iterator()
-```
-
-## `eclipse.collections.org.eclipse.collections.api.list`
+Source: `org/eclipse/collections/api/list/ListIterable.norm`
 
 ### `ListIterable`
 
 ```norm
-interface ListIterable<T> extends ReversibleIterable<T>, Iterable<T?>
+interface ListIterable<T> extends ReversibleIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
+
+- `T`
+
+## `eclipse.collections.org.eclipse.collections.api.list`
+
+Source: `org/eclipse/collections/api/list/MutableList.norm`
+
+### `MutableList`
 
 ```norm
-Iterator<T?> iterator()
+interface MutableList<T> extends MutableCollection<T>, JavaList<T>, Cloneable, ListIterable<T>
 ```
 
+Type parameters:
+
+- `T`
+
 ## `eclipse.collections.org.eclipse.collections.api.list.primitive`
+
+Source: `org/eclipse/collections/api/list/primitive/IntList.norm`
 
 ### `IntList`
 
@@ -782,6 +1209,8 @@ interface IntList extends ReversibleIntIterable
 
 ## `eclipse.collections.org.eclipse.collections.api.list.primitive`
 
+Source: `org/eclipse/collections/api/list/primitive/MutableIntList.norm`
+
 ### `MutableIntList`
 
 ```norm
@@ -790,61 +1219,67 @@ interface MutableIntList extends MutableIntCollection, IntList
 
 ## `eclipse.collections.org.eclipse.collections.api.map`
 
-### `JavaMutableMap`
-
-```norm
-interface JavaMutableMap<K, V> extends MutableMapIterable<K, V>, UnsortedMapIterable<K, V>, Iterable<V?>
-```
-
-#### `iterator`
-
-```norm
-Iterator<V?> iterator()
-```
-
-## `eclipse.collections.org.eclipse.collections.api.map`
+Source: `org/eclipse/collections/api/map/MapIterable.norm`
 
 ### `MapIterable`
 
 ```norm
-interface MapIterable<K, V> extends RichIterable<V>, Iterable<V?>
+interface MapIterable<K, V> extends RichIterable<V>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `K`
+- `V`
 
 ## `eclipse.collections.org.eclipse.collections.api.map`
+
+Source: `org/eclipse/collections/api/map/MutableMap.norm`
+
+### `MutableMap`
+
+```norm
+interface MutableMap<K, V> extends MutableMapIterable<K, V>, UnsortedMapIterable<K, V>, Cloneable
+```
+
+Type parameters:
+
+- `K`
+- `V`
+
+## `eclipse.collections.org.eclipse.collections.api.map`
+
+Source: `org/eclipse/collections/api/map/MutableMapIterable.norm`
 
 ### `MutableMapIterable`
 
 ```norm
-interface MutableMapIterable<K, V> extends MapIterable<K, V>, Iterable<V?>
+interface MutableMapIterable<K, V> extends MapIterable<K, V>, JavaMap<K, V>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `K`
+- `V`
 
 ## `eclipse.collections.org.eclipse.collections.api.map`
+
+Source: `org/eclipse/collections/api/map/UnsortedMapIterable.norm`
 
 ### `UnsortedMapIterable`
 
 ```norm
-interface UnsortedMapIterable<K, V> extends MapIterable<K, V>, Iterable<V?>
+interface UnsortedMapIterable<K, V> extends MapIterable<K, V>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<V?> iterator()
-```
+- `K`
+- `V`
 
 ## `eclipse.collections.org.eclipse.collections.api.multimap`
+
+Source: `org/eclipse/collections/api/multimap/Multimap.norm`
 
 ### `Multimap`
 
@@ -852,7 +1287,14 @@ Iterator<V?> iterator()
 interface Multimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.multimap`
+
+Source: `org/eclipse/collections/api/multimap/MutableMultimap.norm`
 
 ### `MutableMultimap`
 
@@ -860,7 +1302,14 @@ interface Multimap<K, V>
 interface MutableMultimap<K, V> extends Multimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.multimap.list`
+
+Source: `org/eclipse/collections/api/multimap/list/ListMultimap.norm`
 
 ### `ListMultimap`
 
@@ -868,7 +1317,14 @@ interface MutableMultimap<K, V> extends Multimap<K, V>
 interface ListMultimap<K, V> extends ReversibleIterableMultimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.multimap.list`
+
+Source: `org/eclipse/collections/api/multimap/list/MutableListMultimap.norm`
 
 ### `MutableListMultimap`
 
@@ -876,7 +1332,14 @@ interface ListMultimap<K, V> extends ReversibleIterableMultimap<K, V>
 interface MutableListMultimap<K, V> extends ListMultimap<K, V>, MutableMultimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.multimap.ordered`
+
+Source: `org/eclipse/collections/api/multimap/ordered/OrderedIterableMultimap.norm`
 
 ### `OrderedIterableMultimap`
 
@@ -884,7 +1347,14 @@ interface MutableListMultimap<K, V> extends ListMultimap<K, V>, MutableMultimap<
 interface OrderedIterableMultimap<K, V> extends Multimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.multimap.ordered`
+
+Source: `org/eclipse/collections/api/multimap/ordered/ReversibleIterableMultimap.norm`
 
 ### `ReversibleIterableMultimap`
 
@@ -892,35 +1362,42 @@ interface OrderedIterableMultimap<K, V> extends Multimap<K, V>
 interface ReversibleIterableMultimap<K, V> extends OrderedIterableMultimap<K, V>
 ```
 
+Type parameters:
+
+- `K`
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.ordered`
+
+Source: `org/eclipse/collections/api/ordered/OrderedIterable.norm`
 
 ### `OrderedIterable`
 
 ```norm
-interface OrderedIterable<T> extends RichIterable<T>, Iterable<T?>
+interface OrderedIterable<T> extends RichIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.ordered`
+
+Source: `org/eclipse/collections/api/ordered/ReversibleIterable.norm`
 
 ### `ReversibleIterable`
 
 ```norm
-interface ReversibleIterable<T> extends OrderedIterable<T>, Iterable<T?>
+interface ReversibleIterable<T> extends OrderedIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.ordered.primitive`
+
+Source: `org/eclipse/collections/api/ordered/primitive/OrderedIntIterable.norm`
 
 ### `OrderedIntIterable`
 
@@ -930,6 +1407,8 @@ interface OrderedIntIterable extends IntIterable
 
 ## `eclipse.collections.org.eclipse.collections.api.ordered.primitive`
 
+Source: `org/eclipse/collections/api/ordered/primitive/ReversibleIntIterable.norm`
+
 ### `ReversibleIntIterable`
 
 ```norm
@@ -938,33 +1417,35 @@ interface ReversibleIntIterable extends OrderedIntIterable
 
 ## `eclipse.collections.org.eclipse.collections.api.set`
 
-### `JavaMutableSet`
+Source: `org/eclipse/collections/api/set/MutableSet.norm`
+
+### `MutableSet`
 
 ```norm
-interface JavaMutableSet<T> extends UnsortedSetIterable<T>, MutableSetIterable<T>, Iterable<T?>
+interface MutableSet<T> extends UnsortedSetIterable<T>, MutableSetIterable<T>, Cloneable
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.set`
+
+Source: `org/eclipse/collections/api/set/MutableSetIterable.norm`
 
 ### `MutableSetIterable`
 
 ```norm
-interface MutableSetIterable<T> extends SetIterable<T>, JavaMutableCollection<T>, Iterable<T?>
+interface MutableSetIterable<T> extends SetIterable<T>, MutableCollection<T>, JavaSet<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.set`
+
+Source: `org/eclipse/collections/api/set/Pool.norm`
 
 ### `Pool`
 
@@ -972,35 +1453,41 @@ Iterator<T?> iterator()
 interface Pool<V>
 ```
 
+Type parameters:
+
+- `V`
+
 ## `eclipse.collections.org.eclipse.collections.api.set`
+
+Source: `org/eclipse/collections/api/set/SetIterable.norm`
 
 ### `SetIterable`
 
 ```norm
-interface SetIterable<T> extends RichIterable<T>, Iterable<T?>
+interface SetIterable<T> extends RichIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.org.eclipse.collections.api.set`
+
+Source: `org/eclipse/collections/api/set/UnsortedSetIterable.norm`
 
 ### `UnsortedSetIterable`
 
 ```norm
-interface UnsortedSetIterable<T> extends SetIterable<T>, Iterable<T?>
+interface UnsortedSetIterable<T> extends SetIterable<T>
 ```
 
-#### `iterator`
+Type parameters:
 
-```norm
-Iterator<T?> iterator()
-```
+- `T`
 
 ## `eclipse.collections.parallel`
+
+Source: `parallel/BatchIterable.norm`
 
 ### `BatchIterable`
 
@@ -1008,7 +1495,13 @@ Iterator<T?> iterator()
 interface BatchIterable<E>
 ```
 
+Type parameters:
+
+- `E`
+
 ## `eclipse.collections.primitive`
+
+Source: `primitive/AbstractIntIterable.norm`
 
 ### `AbstractIntIterable`
 
@@ -1022,13 +1515,23 @@ class AbstractIntIterable implements IntIterable
 AbstractIntIterable(__JarBindingToken token)
 ```
 
+Parameters:
+
+- `token`: `__JarBindingToken`
+
 ## `eclipse.collections.set`
+
+Source: `set/AbstractUnifiedSet.norm`
 
 ### `AbstractUnifiedSet`
 
 ```norm
-class AbstractUnifiedSet<T> extends AbstractMutableCollection<T> implements JavaMutableSet<T>, Pool<T>, BatchIterable<T>, JavaMutableCollection<T>, RichIterable<T>, Iterable<T?>
+class AbstractUnifiedSet<T> extends AbstractMutableCollection<T> implements MutableSet<T>, Pool<T>, BatchIterable<T>, MutableCollection<T>, RichIterable<T>
 ```
+
+Type parameters:
+
+- `T`
 
 #### `AbstractUnifiedSet`
 
@@ -1036,9 +1539,6 @@ class AbstractUnifiedSet<T> extends AbstractMutableCollection<T> implements Java
 AbstractUnifiedSet(__JarBindingToken token)
 ```
 
-#### `iterator`
+Parameters:
 
-```norm
-Iterator<T?> iterator()
-```
-
+- `token`: `__JarBindingToken`

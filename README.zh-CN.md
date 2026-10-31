@@ -7,3 +7,7 @@
 独立 NAR 消费、传递 API 依赖、继承公开方法、对象与原生类型回调由 `EclipseCollectionsBindingIntegrationTest` 验收。完整 census 与未支持原因位于 NAR 的 `binding/java-api.json`。
 
 [示例](samples/README.zh-CN.md)展示独立消费者对对象集合与原始类型集合的筛选和汇总。
+
+[许可证](LICENSE)
+
+[工具链与包验证入口](.github/workflows/package.yml)

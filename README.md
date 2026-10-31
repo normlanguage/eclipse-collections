@@ -7,3 +7,7 @@ The adapter declaration and runnable example are in `eclipse/collections`. It pi
 `EclipseCollectionsBindingIntegrationTest` covers standalone NAR consumption, the transitive API dependency, inherited public methods, and object and primitive callbacks. The complete API census and reasons for unsupported APIs are in the NAR's `binding/java-api.json`.
 
 [Samples](samples/README.md) include a standalone consumer that filters object and primitive collections.
+
+[License](LICENSE)
+
+[Toolchain and package verification](.github/workflows/package.yml)
